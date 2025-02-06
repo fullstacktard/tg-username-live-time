@@ -8,7 +8,7 @@ const apiId = parseInt(process.env.TELEGRAM_API_ID);
 const apiHash = process.env.TELEGRAM_API_HASH;
 
 const stringSession = new StringSession(
-  process.env.TELEGRAM_SESSION_STRING | ""
+  process.env.TELEGRAM_SESSION_STRING || ""
 );
 
 async function main() {
@@ -32,10 +32,9 @@ async function main() {
     console.log(client.session.save());
   } else {
     await client.connect();
+    await updateLastName(client);
+    setInterval(() => updateLastName(client), 60000);
   }
-
-  await updateLastName(client);
-  setInterval(() => updateLastName(client), 60000);
 }
 
 async function updateLastName(client) {
@@ -53,7 +52,7 @@ async function updateLastName(client) {
       timeZone: "Asia/Makassar",
     });
     const hour = baliTime.getHours();
-    const emoji = hour >= 0 && hour < 8 ? "💤" : "👨‍💻";
+    const emoji = hour >= 0 && hour < 7 ? "💤" : "👨‍💻";
 
     await client.invoke(
       new Api.account.UpdateProfile({
