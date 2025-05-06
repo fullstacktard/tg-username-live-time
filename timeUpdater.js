@@ -42,16 +42,16 @@ async function updateLastName(client) {
     const me = await client.getMe();
     const firstName = me.firstName;
     const now = new Date();
-    const baliTime = new Date(
-      now.toLocaleString("en-US", { timeZone: "Asia/Makassar" })
+    const dubaiTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "Asia/Dubai" })
     );
     const currentTime = now.toLocaleTimeString("en-US", {
       hour12: false,
       hour: "2-digit",
       minute: "2-digit",
-      timeZone: "Asia/Makassar",
+      timeZone: "Asia/Dubai",
     });
-    const hour = baliTime.getHours();
+    const hour = dubaiTime.getHours();
     const emoji = hour >= 0 && hour < 7 ? "💤" : "👨‍💻";
 
     await client.invoke(
