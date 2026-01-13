@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { TelegramClient, Api } from "telegram";
 import { StringSession } from "telegram/sessions/index.js";
 import dotenv from "dotenv";

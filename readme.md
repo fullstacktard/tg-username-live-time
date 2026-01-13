@@ -37,7 +37,12 @@ This script connects to your Telegram account and automatically updates your **l
 2. **Run** the script:
 
    ```bash
-   node index.js
+   npm start
+   ```
+
+   Or directly:
+   ```bash
+   node timeUpdater.js
    ```
 
    The script will prompt for:

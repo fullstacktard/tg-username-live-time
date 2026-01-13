@@ -1,13 +1,37 @@
 {
-  "name": "timeupdater",
+  "name": "@fullstacktard/telegram-time-updater",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Automatically updates your Telegram profile last name with the current time",
+  "type": "module",
+  "main": "timeUpdater.js",
+  "bin": {
+    "telegram-time-updater": "./timeUpdater.js"
+  },
   "scripts": {
+    "start": "node timeUpdater.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "telegram",
+    "profile",
+    "time",
+    "updater",
+    "bot"
+  ],
+  "author": "Fullstacktard",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstacktard/telegram-time-updater.git"
+  },
+  "homepage": "https://github.com/fullstacktard/telegram-time-updater#readme",
+  "bugs": {
+    "url": "https://github.com/fullstacktard/telegram-time-updater/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
     "dotenv": "^16.4.7",
     "input": "^1.0.1",
